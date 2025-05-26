@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollegeTips Photo Gallery</title>
+  <link rel="stylesheet" href="photo_gallery.css" />
+  <!-- Added font for improved typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>College Tips Photo Gallery</h1>
+
+  <div class="filter_buttons">
+    <button class="active" onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('team')">Team Vibes</button>
+    <button onclick="filterGallery('campaigns')">Creative Campaigns</button>
+    <button onclick="filterGallery('fun')">Work Hard, Play Hard</button>
+    <button onclick="filterGallery('bts')">Behind The Scenes</button>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery_items team" onclick="openFullScreen(this)">
+      <img src="/CollegeTips/Photo_Gallery/Fun-vibes.png" alt="Team Vibes" />
+      <div class="caption">Team Vibes</div>
+    </div>
+    <div class="gallery_items campaigns" onclick="openFullScreen(this)">
+      <img src="/CollegeTips/Photo_Gallery/creative.png" alt="Creative Campaigns" />
+      <div class="caption">Creative Campaigns</div>
+    </div>
+    <div class="gallery_items fun" onclick="openFullScreen(this)">
+      <img src="/CollegeTips/Photo_Gallery/work.png" alt="Work Hard, Play Hard" />
+      <div class="caption">Work Hard, Play Hard</div>
+    </div>
+    <div class="gallery_items bts" onclick="openFullScreen(this)">
+      <img src="/CollegeTips/Photo_Gallery/bts.png" alt="Behind the Scenes" />
+      <div class="caption">Behind-The-Scenes</div>
+    </div>
+  </div>
+
+  <!-- Fullscreen View -->
+  <div class="fullScreen" id="fullScreen">
+    <span class="closeBtn" onclick="closeFullScreen()">&times;</span>
+    <img id="fullScreen_img" src="" alt="Full View" />
+  </div>
+
+  <script src="photo_gallery.js"></script>
+</body>
+</html>
